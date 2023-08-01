@@ -3,29 +3,26 @@
 import random
 from collections import Counter
 
-sports = '''football soccer rugby basketball baseball cricket golf 
-            hockey racing swimming'''
+sports = ['football', 'soccer', 'rugby', 'basketball', 'baseball', 'cricket', 'golf', 
+            'hockey', 'racing', 'swimming']
 
-food = '''pasta hamburgers hotdogs cereal toast steak chicken apples
-            oranges oatmeal pretzels salad'''
+food = ['pasta', 'hamburgers', 'hotdogs', 'cereal', 'toast', 'steak', 'chicken', 'apples',
+            'oranges', 'oatmeal', 'pretzels', 'salad']
 
-videoGames = '''halo cod bioshock pokemon valorant mario destiny titanfall 
-                madden minecraft roblox skyrim starfield'''
+videoGames = ['halo', 'cod', 'bioshock', 'pokemon', 'valorant', 'mario', 'destiny', 'titanfall', 
+                'madden', 'minecraft', 'roblox', 'skyrim', 'starfield']
 
 def chose_a_category():
     category = str(input('What category would you like: sports, food, or games? '))
     if category == 'sports':
         print("You have selected Sports")
-        randomSport = sports.split(' ')
-        word = random.choice(randomSport)
+        word = random.choice(sports)
     elif category == 'food':
         print("You have selected Food")
-        randomFood = food.split(' ')
-        word = random.choice(randomFood)
+        word = random.choice(food)
     elif category == 'games':
         print("You have selected Video Games")
-        randomGame = videoGames.split(' ')
-        word = random.choice(randomGame)
+        word = random.choice(videoGames)
     else:
         print('Please enter a listed category')
         chose_a_category()
@@ -83,8 +80,8 @@ def gamePlay():
                 print(word, end=' ')
                 gamestate = 1
                 print('WooHoo! You have won the game!')
-                break
-                break
+                break #from for loop
+                break #from while loop
             else:
                 print('_', end=' ')
     
